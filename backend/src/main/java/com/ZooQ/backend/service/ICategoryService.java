@@ -1,5 +1,7 @@
 package com.ZooQ.backend.service;
 
+import com.ZooQ.backend.dto.CategoryDTO;
+import com.ZooQ.backend.dto.CategoryResponse;
 import com.ZooQ.backend.model.Category;
 
 import java.util.List;

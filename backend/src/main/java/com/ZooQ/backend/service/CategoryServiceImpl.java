@@ -1,13 +1,24 @@
 package com.ZooQ.backend.service;
 
+import com.ZooQ.backend.dto.CategoryDTO;
+import com.ZooQ.backend.dto.CategoryResponse;
+import com.ZooQ.backend.exceptions.APIException;
+import com.ZooQ.backend.exceptions.ResourceNotFoundException;
 import com.ZooQ.backend.model.Category;
+import com.ZooQ.backend.repository.CategoryRepository;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CategoryServiceImpl implements CategoryService{
+public class CategoryServiceImpl implements ICategoryService{
 
     @Autowired
     private CategoryRepository categoryRepository;
